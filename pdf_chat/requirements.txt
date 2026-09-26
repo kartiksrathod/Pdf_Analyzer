@@ -1,0 +1,28 @@
+# Runtime dependencies for the PDF Intelligence (ChatPDF) application.
+#
+# Verified with Python 3.13.9 on Windows (pip 26.1.2):
+#     python -m pip install -r requirements.txt
+#
+# The LLM is served locally by Ollama (see README.md -> "Ollama Setup").
+# Ollama is a desktop application, not a Python package, so it is not listed
+# here; langchain-ollama talks to it via the ollama client it depends on.
+
+# --- Streamlit UI ---
+streamlit==1.59.2
+
+# --- PDF text extraction ---
+PyPDF2==3.0.1
+
+# --- Loads an optional .env file at startup (no variable is required today) ---
+python-dotenv==1.2.2
+
+# --- RAG stack: HF embeddings -> FAISS -> local Ollama LLM ---
+langchain-core==1.4.9
+langchain-classic==1.0.8
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+langchain-huggingface==1.2.2
+langchain-ollama==1.1.0
+faiss-cpu==1.14.3
+sentence-transformers==5.6.0
+torch==2.13.0
