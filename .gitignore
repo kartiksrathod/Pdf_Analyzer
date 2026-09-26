@@ -1,0 +1,18 @@
+# Repository-root ignore rules.
+# The application lives in pdf_chat/, which has its own .gitignore for
+# app-level entries; this file protects the repository root as well.
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Local secrets and configuration
+.env
+.streamlit/secrets.toml
+
+# IDE / editor settings
+.idea/
