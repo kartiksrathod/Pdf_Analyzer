@@ -27,6 +27,27 @@ css = '''
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+.chat-sources {
+  margin: -0.5rem 0 1.25rem 0;
+  padding: 0.6rem 1.75rem;
+  background-color: #1b1f2a;
+  border-left: 3px solid #7a8798;
+  border-radius: 0.5rem;
+  color: #cfd6e0;
+  font-size: 0.85rem;
+}
+.chat-sources .sources-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.chat-sources ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.chat-sources code {
+  color: #ffffff;
+  background: transparent;
+}
 '''
 bot_template = '''
 <div class="chat-message bot">
@@ -44,5 +65,14 @@ user_template = '''
         <img src="https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg">
     </div>    
     
+</div>
+'''
+
+# Source list shown under an answer. Only the static markup here is trusted;
+# every dynamic value is escaped with html.escape() before {{ITEMS}} is replaced.
+sources_template = '''
+<div class="chat-sources">
+    <div class="sources-title">Sources</div>
+    <ul>{{ITEMS}}</ul>
 </div>
 '''

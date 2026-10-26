@@ -1,0 +1,9 @@
+# Development / test dependencies (not needed to run the application).
+#
+# Install with:
+#     python -m pip install -r requirements-dev.txt
+#
+# Then run the test suite from the pdf_chat directory:
+#     python -m pytest tests -v
+
+pytest==8.4.2
